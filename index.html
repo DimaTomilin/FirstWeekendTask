@@ -1,158 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<link>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"></link>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    <div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
-    <nav id="navbar">
-        <header>CSS Documentation</header>
-        <ul>
-            <a class="nav-link" href="#CSS_Cascading_Style_Sheets">CSS Cascading Style Sheets</a>
-            <a class="nav-link" href="#Anatomy_of_a_CSS_ruleset">Anatomy of a CSS ruleset</a>
-            <a class="nav-link" href="#Different_types_of_selectors">Different types of selectors</a>
-            <a class="nav-link" href="#CSS_all_about_boxes">CSS all about boxes</a>
-            <a class="nav-link" href="#Pseudo_classes">Pseudo classes</a>
-            <a class="nav-link" href="#The_display_Property">The display Property</a>
-            <a class="nav-link" href="#CSS_@media_Rule">CSS @media Rule</a>
-            <a class="nav-link" href="#Conclusion">Conclusion</a>
-        </ul>
-    </nav>
-    <main id="main-doc">
-        <section class="main-section" id="CSS_Cascading_Style_Sheets">
-            <header>
-                <h2>CSS Cascading Style Sheets</h2>
-            </header>
-            <div>
-                <p><b>Cascading Style Sheets (CSS)<b> is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
-                </p>
-                <p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
-                </p>
-                <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:<code>p{  color:red;  }</code>
-            </div>
-        </section>
-        <section class="main-section"  id="Anatomy_of_a_CSS_ruleset" >
-            <header>
-                <h2>Anatomy of a CSS ruleset</h2>
-            </header>
-            <div>
-                <p>Let's dissect the CSS code for red paragraph text to understand how it works :<p>
-                <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="css code structure">
-                <p>The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:
-                </p>
-                <ol>
-                    <li>
-                        <h3>Selector</h3>
-                        <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example,<code> <p> </code> elements). To style a different element, change the selector.</p>
-                    </li>
-                    <li>
-                        <h3>Declaration</h3>
-                        <p>This is a single rule like <code> color: red;</code>. It specifies which of the element's properties you want to style.</p>
-                    </li>
-                    <li>
-                        <h3>Properties</h3>
-                        <p>These are ways in which you can style an HTML element. (In this example, color is a property of the <code> <p> </code> elements.) In CSS, you choose which properties you want to affect in the rule.</p>
-                    </li>
-                    <li>
-                        <h3>Property value</h3>
-                        <p>To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many<code> color </code> values in addition to <code> red</code>.)</p>
-                    </li>
-                </ol>
-                <p>Note the other important parts of the syntax:</p>
-                <ul>
-                    <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
-                    <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
-                    <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.lk</li>
-                </ul>
-            </div>
-        </section>
-        <section  class="main-section" id="Different_types_of_selectors">
-            <header>
-                <h2>Different types of selectors</h2>
-            </header>
-            <div>
-                <p>There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:</p>
-                <ul>
-                    <li>Element selector (sometimes called a tag or type selector) For example:<code>p</code></li>
-                    <li>ID selector For example:<code>#my-id</code></li>
-                    <li>Class selector For example:<code>.my-class</code></li>
-                    <li>Attribute selector For example:<code>img[src]</code></li>
-                    <li>Pseudo-class selector For example:<code>a:hover</code></li>
-                </ul>
-            </div>
-        </section>
-        <section  class="main-section" id="CSS_all_about_boxes">
-            <header>
-                <h2>CSS all about boxes</h2>
-            </header>
-            <div>
-                <p>Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
-                <p>CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:</p>
-                <ul>
-                    <li><code>padding</code>, the space around the content. In the example below, it is the space around the paragraph text.</li>
-                    <li><code>border</code>, the solid line that is just outside the padding.</li>
-                    <li><code>margin</code>, the space around the outside of the border.</li>
-                </ul>
-            </div>
-        </section>
-        <section  class="main-section" id="Pseudo_classes">
-            <header>
-                <h2>Pseudo classes</h2>
-            </header>
-            <div>
-                <p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example,<code> :hover </code> can be used to change a button's color when the user's pointer hovers over it.</p>
-                <p>seudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator (<code>:visited</code>, for example), the status of its content (like<code> :checked </code>on certain form elements), or the position of the mouse (like<code> :hover</code> , which lets you know if the mouse is over an element or not).</p>
-                <p>More about pseudo-class you can find on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" alt="Pseudo-classes tutorial">MDN site</a></p>
-            </div>
-        </section>
-        <section  class="main-section" id="The_display_Property">
-            <header>
-                <h2>The display Property</h2>
-            </header>
-            <div>
-                <p>The display property specifies if/how an element is displayed. Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.</p>
-                <p>The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.</p>
-                <p>Formally, the display property sets an element's inner and outer display types. The outer type sets an element's participation in flow layout; the inner type sets the layout of children. Some values of<code> display </code>are fully defined in their own individual specifications; for example the detail of what happens when <code> display: flex </code>is declared is defined in the CSS Flexible Box Model specification. See the table at the end of this document for all of the individual specifications.</p>
-                <p>More information about display types you can find on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" alt="Display types">MDN site</a></p>
-            </div>
-        </section>
-        <section  class="main-section" id="CSS_@media_Rule">
-            <header>
-                <h2>CSS @media Rule</h2>
-            </header>
-            <div>
-                <p>The <code>@media</code>rule is used in media queries to apply different styles for different media types/devices.</p>
-                <p>Media queries can be used to check many things, such as:</p>
-                <ul>
-                    <li>width and height of the viewport</li>
-                    <li>width and height of the device</li>
-                    <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
-                    <li>resolution</li>
-                </ul>
-                <p>Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</p>
-                <p>You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).</p>
-                <p>In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.</p>
-                <code> @media only screen and (max-width: 600px) {
-                        body {
-                             background-color: lightblue;
-                            }
-                </code>
-            </div>
-        </section>
-        <section  class="main-section" id="Conclusion">
-            <header>
-                <h2>Conclusion</h2>
-            </header>
-            <div>
-                <p>Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. CSS it is very intresting and important part of wed-design so if you to be a good front-end develomep you also need to own in SCC. All information for this Technical Documentation Page taked from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" alt="CSS">MDN site</a> and <a href="https://www.w3schools.com/css/default.asp" target="_blank" alt="CSS">W3 School</a>. Thank you for attention.</p>
-            </div>
-        </section>
-        </section>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"></link>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
+        <nav id="navbar">
+            <header>CSS Documentation</header>
+            <ul style="list-style-type: none";>
+                <li><a class="nav-link" href="#CSS_Cascading_Style_Sheets">CSS Cascading Style Sheets</a></li>
+                <li><a class="nav-link" href="#Anatomy_of_a_CSS_ruleset">Anatomy of a CSS ruleset</a></li>
+                <li><a class="nav-link" href="#Different_types_of_selectors">Different types of selectors</a></li>
+                <li><a class="nav-link" href="#CSS_all_about_boxes">CSS all about boxes</a></li>
+                <li><a class="nav-link" href="#Pseudo_classes">Pseudo classes</a></li>
+                <li><a class="nav-link" href="#The_display_Property">The display Property</a></li>
+                <li><a class="nav-link" href="#CSS_@media_Rule">CSS @media Rule</a></li>
+                <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="CSS_Cascading_Style_Sheets">
+                <header>
+                    <h2>CSS Cascading Style Sheets</h2>
+                </header>
+                <div>
+                    <p><b>Cascading Style Sheets (CSS)<b> is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+                    <p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+                    <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:<code>p{  color:red;  }</code>
+                </div>
+            </section>
+            <section class="main-section"  id="Anatomy_of_a_CSS_ruleset" >
+                <header>
+                    <h2>Anatomy of a CSS ruleset</h2>
+                </header>
+                <div>
+                    <p>Let's dissect the CSS code for red paragraph text to understand how it works :<p>
+                    <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="css code structure">
+                    <p>The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:
+                    </p>
+                    <ol>
+                        <li>
+                            <h3>Selector</h3>
+                            <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example,<code> <p> </code> elements). To style a different element, change the selector.</p>
+                        </li>
+                        <li>
+                            <h3>Declaration</h3>
+                            <p>This is a single rule like <code> color: red;</code>. It specifies which of the element's properties you want to style.</p>
+                        </li>
+                        <li>
+                            <h3>Properties</h3>
+                            <p>These are ways in which you can style an HTML element. (In this example, color is a property of the <code> <p> </code> elements.) In CSS, you choose which properties you want to affect in the rule.</p>
+                        </li>
+                        <li>
+                            <h3>Property value</h3>
+                            <p>To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many<code> color </code> values in addition to <code> red</code>.)</p>
+                        </li>
+                    </ol>
+                    <p>Note the other important parts of the syntax:</p>
+                    <ul>
+                        <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+                        <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+                        <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.lk</li>
+                    </ul>
+                </div>
+            </section>
+            <section  class="main-section" id="Different_types_of_selectors">
+                <header>
+                    <h2>Different types of selectors</h2>
+                </header>
+                <div>
+                    <p>There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:</p>
+                    <ul>
+                        <li>Element selector (sometimes called a tag or type selector) For example:<code>p</code></li>
+                        <li>ID selector For example:<code>#my-id</code></li>
+                        <li>Class selector For example:<code>.my-class</code></li>
+                        <li>Attribute selector For example:<code>img[src]</code></li>
+                        <li>Pseudo-class selector For example:<code>a:hover</code></li>
+                    </ul>
+                </div>
+            </section>
+            <section  class="main-section" id="CSS_all_about_boxes">
+                <header>
+                    <h2>CSS all about boxes</h2>
+                </header>
+                <div>
+                    <p>Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
+                    <p>CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:</p>
+                    <ul>
+                        <li><code>padding</code>, the space around the content. In the example below, it is the space around the paragraph text.</li>
+                        <li><code>border</code>, the solid line that is just outside the padding.</li>
+                        <li><code>margin</code>, the space around the outside of the border.</li>
+                    </ul>
+                </div>
+            </section>
+            <section  class="main-section" id="Pseudo_classes">
+                <header>
+                    <h2>Pseudo classes</h2>
+                </header>
+                <div>
+                    <p>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example,<code> :hover </code> can be used to change a button's color when the user's pointer hovers over it.</p>
+                    <p>seudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator (<code>:visited</code>, for example), the status of its content (like<code> :checked </code>on certain form elements), or the position of the mouse (like<code> :hover</code> , which lets you know if the mouse is over an element or not).</p>
+                    <p>More about pseudo-class you can find on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" alt="Pseudo-classes tutorial">MDN site</a></p>
+                </div>
+            </section>
+            <section  class="main-section" id="The_display_Property">   
+                <header>
+                    <h2>The display Property</h2>
+                </header>
+                <div>
+                    <p>The display property specifies if/how an element is displayed. Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.</p>
+                    <p>The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.</p>
+                    <p>Formally, the display property sets an element's inner and outer display types. The outer type sets an element's participation in flow layout; the inner type sets the layout of children. Some values of<code> display </code>are fully defined in their own individual specifications; for example the detail of what happens when <code> display: flex </code>is declared is defined in the CSS Flexible Box Model specification. See the table at the end of this document for all of the individual specifications.</p>
+                    <p>More information about display types you can find on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank" alt="Display types">MDN site</a></p>
+                </div>
+            </section>
+            <section  class="main-section" id="CSS_@media_Rule">
+                <header>
+                    <h2>CSS @media Rule</h2>
+                </header>
+                <div>
+                    <p>The <code>@media</code>rule is used in media queries to apply different styles for different media types/devices.</p>
+                    <p>Media queries can be used to check many things, such as:</p>
+                    <ul>
+                        <li>width and height of the viewport</li>
+                        <li>width and height of the device</li>
+                        <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+                        <li>resolution</li>
+                    </ul>
+                    <p>Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.</p>
+                    <p>You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).</p>
+                    <p>In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.</p>
+                    <code> @media only screen and (max-width: 600px) {
+                            body {
+                                 background-color: lightblue;
+                                }
+                    </code>
+                </div>
+            </section>
+            <section  class="main-section" id="Conclusion">
+                <header>
+                    <h2>Conclusion</h2>
+                </header>
+                <div>
+                    <p>Thus, a web page you see in a browser is a combination of the document’s data sources, with the CSS formatting rules applied. CSS it is very intresting and important part of wed-design so if you to be a good front-end develomep you also need to own in SCC. All information for this Technical Documentation Page taked from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" alt="CSS">MDN site</a> and <a href="https://www.w3schools.com/css/default.asp" target="_blank" alt="CSS">W3 School</a>. Thank you for attention.</p>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
