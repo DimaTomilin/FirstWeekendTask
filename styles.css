@@ -4,6 +4,9 @@
 body{
     display: flex;
 }
+code{
+    background-color: rgb(204, 211, 224);
+}
 #navbar {
     font-family: 'Times New Roman', Times, serif;
     position: fixed;
@@ -12,9 +15,16 @@ body{
     height: 100%;
 }
 #main-doc{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-left: 350px;
+}
+#navbar header{
+    padding: 10px 15px;
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
+    display: block;
 }
 .nav-link{
     display: block;
@@ -27,11 +37,23 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
-#navbar header{
-    padding: 10px 15px;
-    font-weight: 400;
-    font-size: 28px;
-    text-align: center;
-    display: block;
+.main-section{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
 }
-
+@media only screen and (max-width: 1200px) {
+    body{
+        display: block;
+    }
+    #navbar{
+        display: block;
+        width: 200px;
+    }
+    #main-doc{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 200px;
+    }
+}
